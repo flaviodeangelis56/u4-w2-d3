@@ -38,7 +38,7 @@ public class Main {
         orderProductByBaki.add(ciuccio);
         orderProductByBaki.add(ilSilenzioDegliInnocenti);
 
-        
+
         orderProductByGon.add(tShirt);
         orderProductByGon.add(ilSignoreDegliAnelli);
 
@@ -78,7 +78,7 @@ public class Main {
         productList.stream().filter(product -> product.getCategory().equals("Boys")).forEach(product -> System.out.println(product));
         System.out.println("-------------------EXERCISE 4-------------------");
         orderList.stream().filter(order -> order.getCustomers().getTier() == 2).forEach(order -> orderListCustomersTier2.add(order));
-        orderListCustomersTier2.stream().filter(order -> order.getOrderDate().isAfter(onefeb)).filter(order -> order.getOrderDate().isBefore(oneApr)).forEach(order -> System.out.println(order.toString()));
+        orderListCustomersTier2.stream().filter(order -> order.getOrderDate().isAfter(onefeb)).filter(order -> order.getOrderDate().isBefore(oneApr)).forEach(order -> System.out.println(order.getProducts().toString()));
     }
 
 
